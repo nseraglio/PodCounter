@@ -42,7 +42,7 @@ def run_count_pods(folder_path):
         writer.writerow(['Photo Name', 'Pod Number', 'Pod Size (cm)'])
 
         # Find all images in the folder
-        images = glob.glob(os.path.join(folder_path, '*.jpg'))
+        images = glob.glob(os.path.join(folder_path, '*.jp*g'))
 
         for img_path in tqdm(images, desc="Counting pods"):
             # Read the image

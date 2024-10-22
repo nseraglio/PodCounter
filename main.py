@@ -17,4 +17,4 @@ def run_all(folder_path, fisheye):
     generate_summary_table(pods_counting_path)
 
 folder_path = 'yield_components'
-run_all(folder_path, fisheye=True)
+run_all(folder_path, fisheye=False)

@@ -18,7 +18,7 @@ def run_fisheye_correction(folder_path):
         return cv2.remap(img, mapx, mapy, cv2.INTER_LINEAR)
 
     # Find all images in the folder
-    images = glob.glob(os.path.join(folder_path, '*.jpg'))
+    images = glob.glob(os.path.join(folder_path, '*.jp*g'))
 
     for img_path in tqdm(images, desc="Correcting fisheye distortion"):
         img = cv2.imread(img_path)
