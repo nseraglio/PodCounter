@@ -30,7 +30,10 @@ def detect_white_label(image):
         return label_contour
     return None
 
-def run_count_pods(folder_path):
+def run_count_pods(folder_path, label_area_cm2):
+    # Certifique-se de que label_area_cm2 é um número
+    label_area_cm2 = float(label_area_cm2)
+    
     output_folder = os.path.join(folder_path, 'counted')
     csv_file = os.path.join(output_folder, 'pods.csv')
     # Create folder to save processed images
@@ -68,12 +71,8 @@ def run_count_pods(folder_path):
                 dilated_label_mask_inv = cv2.bitwise_not(dilated_label_mask)
 
                 # Calculate the image scale (cm/pixel)
-                x, y, w, h = cv2.boundingRect(label_contour)
-                label_width_cm = 4 * 2.54  # 4 inches in cm
-                label_height_cm = 2 * 2.54  # 2 inches in cm
-                scale_x = label_width_cm / w
-                scale_y = label_height_cm / h
-                scale = (scale_x + scale_y) / 2  # Average of x and y scales
+                label_area_pixels = cv2.contourArea(label_contour)
+                scale = (label_area_cm2 / label_area_pixels) ** 0.5
 
                 # Define the minimum area in pixels (1 cm²)
                 min_area_cm2 = 0.5
@@ -149,5 +148,6 @@ def run_count_pods(folder_path):
                 cv2.imwrite(output_path, image)
 
 # Example usage
-#folder_path = 'yield_components'
-#run_count_pods(folder_path)
+# folder_path = 'yield_components'
+# label_area_cm2 = 20.32 * 10.16  # Example label area in cm² (4 inches x 2 inches)
+# run_count_pods(folder_path, label_area_cm2)
