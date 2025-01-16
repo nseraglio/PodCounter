@@ -33,7 +33,7 @@ pip install -r requirements.txt
 ## How to Use
 ### Setup
 1. Organize the images into an input folder.
-2. Set the arguments for the input and output directories:
+2. Set the arguments for the input and output directories in `main.py`:
    - `folder_path`: Path to the folder containing the input images.
    - `counting_path`: Path to save the processed images and summary.
    - `label_area_cm2`: Defines the area of the white label in square centimeters.
