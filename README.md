@@ -25,10 +25,11 @@ pip install -r requirements.txt
    Renames images based on detected QR codes.
 
 4. **Pod Counting**  
-   Detects and counts pods in the images, calculates their lengths using a white label as a size reference, and saves each individual length in a `.csv` file.
+   Detects and counts pods in the images, calculates their lengths using a white label as a size reference (can be the QR code label), and saves each individual length in the `pods.csv` file.
+   In the processed images, the pods are outlined in red, while the white labels are outlined in green to facilitate visual verification. Each pod is assigned a unique identifier (ID) at its centroid, enabling the individual identification of each pod in the `pods.csv` file.
 
-5. **Summary Generation**  
-   Creates a summary table with the total number of pods and the average pod length for each processed image, and save in a `.txt` file.
+6. **Summary Generation**  
+   Creates a summary table with the total number of pods and the average pod length for each processed image, and save in the `summary_table.txt` file.
 
 ## How to Use
 ### Setup
