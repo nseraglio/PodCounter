@@ -25,10 +25,10 @@ def run_pods(folder_path, counting_path, label_area_cm2):
     generate_summary_table(counting_path)
 
 # Path to the original folder containing the pod images
-folder_path = 'test/pods'
+folder_path = 'example/pods'
 
 # Path to the folder where the processed images will be saved
-counting_path = 'test/pods_counting'
+counting_path = 'example/pods_counting'
 
 # Area of the white label in cm² (passed as a string, will be converted to float in the function)
 label_area_cm2 = '51.6'
