@@ -49,3 +49,9 @@ python main.py
 - **Individual Pods Size**: Saved in the `counting_path/counted/pods.csv`.
 - **Summary**: Generated at `counting_path/counted/summary_table.txt`.
 
+## Taking pictures
+1. Use a board with a bright blue color.
+2. Pods must not touch or be very close to each other. Pods that are touching will be counted as a single pod.
+3. Avoid placing any objects on the board other than the pods and the white reference label.
+
+
