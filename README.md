@@ -38,7 +38,9 @@ pip install -r requirements.txt
    - `counting_path`: Path to save the processed images and summary.
 
 3. Run the main script `main.py`:
+```bash 
 python main.py
+```
 
 ### Automated Steps
 When running the main script, the following steps are performed:
