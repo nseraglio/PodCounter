@@ -25,10 +25,10 @@ pip install -r requirements.txt
    Renames images based on detected QR codes.
 
 4. **Pod Counting**  
-   Identifies and counts pods in the images and calculates their lengths.
+   Detects and counts pods in the images, calculates their lengths, and saves each individual length in a `.csv` file.
 
 5. **Summary Generation**  
-   Creates a summary table with the total number of pods and the average pod length for each processed image.
+   Creates a summary table with the total number of pods and the average pod length for each processed image, and save in a `.txt` file.
 
 ## How to Use
 ### Setup
@@ -42,25 +42,9 @@ pip install -r requirements.txt
 python main.py
 ```
 
-### Automated Steps
-When running the main script, the following steps are performed:
-1. **Fisheye Distortion Correction**: Corrects distortion for all images in the folder.
-2. **Background Cropping**: Removes backgrounds and adjusts images to retain only the relevant areas.
-3. **QR Code Renaming**: Detects QR codes in the images and renames them accordingly.
-4. **Pod Counting**: Counts pods and measures their lengths and save in a `.csv` file.
-5. **Summary**: Generates a detailed report in `.txt` format.
-
 ### Output
 - **Background Cropped Images**: Saved in the `counting_path` directory.
 - **Images with Pods Highlighted**: Saved in the `counting_path/counted` directory.
 - **Individual Pods Size**: Saved in the `counting_path/counted/pods.csv`.
 - **Summary**: Generated at `counting_path/counted/summary_table.txt`.
 
-## Example Usage
-```bash
-from main import run_pods
-
-folder_path = 'grains'  # Input folder with original images
-counting_path = 'pods_counting'  # Output folder for processed results
-run_pods(folder_path, counting_path)
-```
