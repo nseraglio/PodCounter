@@ -50,9 +50,9 @@ python main.py
 - **Summary**: Generated at `counting_path/counted/summary_table.txt`.
 
 ## Taking pictures
-- **Use a board with a bright blue color.
-- **Pods must not touch or be very close to each other. Pods that are touching will be counted as a single pod.
-- **Avoid placing any objects on the board other than the pods and the white reference label.
-- **Refer to the image at `example/pods_counting/counted/314_MB-DOP_1.jpg` to see how the pods and the label should be positioned and what happens when pods touch (pods 4, 22, and 55).
+- Use a board with a bright blue color.
+- Pods must not touch or be very close to each other. Pods that are touching will be counted as a single pod.
+- Avoid placing any objects on the board other than the pods and the white reference label.
+- Refer to the image at `example/pods_counting/counted/314_MB-DOP_1.jpg` to see how the pods and the label should be positioned and what happens when pods touch (pods 4, 22, and 55).
 
 
