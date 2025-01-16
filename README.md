@@ -10,7 +10,9 @@ To run this project, you need the following Python libraries:
 - `matplotlib`
 
 You can install all dependencies using the `requirements.txt` file:
-```bash pip install -r requirements.txt ```
+```bash 
+pip install -r requirements.txt
+```
 
 ## Features
 1. **Fisheye Distortion Correction**  
