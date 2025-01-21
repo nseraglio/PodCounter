@@ -33,7 +33,7 @@ pip install -r requirements.txt
 
 ## How to Use
 
-## Taking pictures
+### Taking pictures
 - Use a board with a matte blue color.
 - To measure pod sizes, a white reference polygon with a known area is required beneath the blue board. This polygon, which should be the largest white object under the board, can also serve as a label with a QR code to identify the sample.
 - Pods must not touch or be very close to each other. Pods that are touching will be counted as a single pod.
