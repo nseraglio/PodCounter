@@ -32,6 +32,14 @@ pip install -r requirements.txt
    Creates a summary table with the total number of pods and the average pod length for each processed image, and save in the `summary_table.txt` file.
 
 ## How to Use
+
+## Taking pictures
+- Use a board with a matte blue color.
+- To measure pod sizes, a white reference polygon with a known area is required beneath the blue board. This polygon, which should be the largest white object under the board, can also serve as a label with a QR code to identify the sample.
+- Pods must not touch or be very close to each other. Pods that are touching will be counted as a single pod.
+- Avoid placing any objects on the board other than the pods and the white reference label.
+- Refer to the image at `example/pods_counting/counted/314_MB-DOP_1.jpg` to see how the pods and the label should be positioned and what happens when pods touch (pods 4, 22, and 55).
+
 ### Setup
 1. Organize the images into an input folder.
 2. Set the arguments for the input and output directories in `main.py`:
@@ -48,13 +56,5 @@ python main.py
 - **Images with Pods Highlighted**: Saved in the `counting_path/counted` directory.
 - **Individual Pods Size**: Saved in the `counting_path/counted/pods.csv`.
 - **Summary**: Generated at `counting_path/counted/summary_table.txt`.
-
-## Taking pictures
-- Use a board with a matte blue color.
-- To measure pod sizes, a white reference polygon with a known area is required beneath the blue board. This polygon, which should be the largest white object under the board, can also serve as a label with a QR code to identify the sample.
-- Pods must not touch or be very close to each other. Pods that are touching will be counted as a single pod.
-- Avoid placing any objects on the board other than the pods and the white reference label.
-- Refer to the image at `example/pods_counting/counted/314_MB-DOP_1.jpg` to see how the pods and the label should be positioned and what happens when pods touch (pods 4, 22, and 55).
-
 
 
