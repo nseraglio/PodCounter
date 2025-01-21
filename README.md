@@ -51,9 +51,10 @@ python main.py
 
 ## Taking pictures
 - Use a board with a matte blue color.
+- - To measure pod sizes, a white reference polygon with a known area is required beneath the blue board. This polygon, which should be the largest white object under the board, can also serve as a label with a QR code to identify the sample.
 - Pods must not touch or be very close to each other. Pods that are touching will be counted as a single pod.
 - Avoid placing any objects on the board other than the pods and the white reference label.
 - Refer to the image at `example/pods_counting/counted/314_MB-DOP_1.jpg` to see how the pods and the label should be positioned and what happens when pods touch (pods 4, 22, and 55).
-- To measure pod sizes, a white reference polygon with a known area is required beneath the blue board. This polygon, which should be the largest white object under the board, can also serve as a label with a QR code to identify the sample.
+
 
 
